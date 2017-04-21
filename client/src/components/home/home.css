@@ -1,0 +1,30 @@
+.hero-image {
+  background: url('../../images/stock02.jpg') no-repeat center center;
+  background-size:cover;
+  height: 550px;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.faded {
+  min-width: 100%;
+  min-height: 100%;
+  background-color: rgba(255, 255, 255, 0.45);
+}
+
+.tagline{
+  text-align: center;
+  font-family: 'Sansita', sans-serif;
+  font-size: 90px;
+  color: #f18f01;
+  padding-top: 140px;
+  margin-top: 0;
+}
+
+.home-link-container{
+  display: flex;
+  justify-content: space-around;
+  padding: 0 20px;
+  max-width: 1100px;
+  margin: 80px auto 100px;
+}

@@ -78,8 +78,8 @@ export const fetchAddNewAnimal = (id, newAnimal) => dispatch => {
     return res.json(); 
   })
   .then(result => {
-    console.log('dispatching log in');
-    return dispatch(fetchLogInData(id));
+    console.log('dispatching new log in success');
+    return dispatch(logInSuccess(result));
   });
 }
 
@@ -93,8 +93,16 @@ export const deleteAnimal = (id, animalId) => dispatch => {
     body: JSON.stringify({animalId})
   })
   .then(result => {
-    console.log('DELETE Success', result);
-    console.log('dispatching log in');
-    return dispatch(fetchLogInData(id));
-  });
+    // console.log('DELETE Success', result);
+    // console.log('dispatching log in');   
+    return result.json()
+  })
+  .then(jsonValue => {
+    console.log('hello');
+    console.log(jsonValue);
+    return dispatch(logInSuccess(jsonValue));
+  })
+  .catch(err => {
+    console.log(err);
+  })
 }

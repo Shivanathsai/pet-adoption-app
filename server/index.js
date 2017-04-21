@@ -51,7 +51,6 @@ app.get('/api', (req, res) => {
 });
 
 app.post('/api', jsonParser, (req, res) => {
-    console.log(req.body);
     // Does the shelter already exist in the database?
     return Shelter
      .count({name: req.body.name}).exec()
@@ -76,7 +75,9 @@ app.post('/api', jsonParser, (req, res) => {
          });
      })
      .then(newShelter => {
-         return res.status(201).json(newShelter.apiRepr());
+         const created = newShelter.apiRepr();
+         console.log(created);
+         return res.status(201).json(created);
      })
      .catch(err => {
          console.error(err);
@@ -96,25 +97,30 @@ app.put('/api/login/update/:id', jsonParser, (req, res) => {
 				{safe: true, upsert: true, new: true}
 			).exec()
 				.then(result => {
-				return res.status(202).json(result); 
+                const shelterUpdate = result.apiRepr();
+				return res.status(200).json(shelterUpdate); 
 			})
-				.catch(error => {
+			    .catch(error => {
 				console.error(error);
-				res.status(400).send('error');
+				res.status(500).send('error');
 			});
 });
 
 app.delete('/api/login/update/:id', jsonParser, (req, res) => {
     const {animalId} = req.body;
-    console.log(animalId);
     return Shelter
         .findByIdAndUpdate(
             req.params.id,
             { $pull: { animals: { _id: animalId } } },
             {safe: true}
 		).exec()
-        .then(result => {
-            return res.status(204).json({result});
+        .then(isDone => {
+            return Shelter
+                .findById(req.params.id).exec();
+        })
+        .then(document => {
+            const shelter = document.apiRepr();
+            return res.status(200).json(shelter);
         })
         .catch(err => {
             console.error(err);
