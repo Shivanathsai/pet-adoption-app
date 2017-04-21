@@ -1,13 +1,26 @@
-# Thinkful Full Stack Template
+# AdoptMe: Help needy pets by adopting them.
 
-A template for developing and deploying full stack JavaScript apps.
+AdoptMe was designed to address the dilema of shelters not being able to find home for pets. 
 
-## Getting started
+## Description
+
+AdoptMe is a hub for both animal shelters and people searching for pets. 
+
+**Animal Shelters:** 
+* Can create an account
+* Can add a shelter to that account
+* Can add pets and update their status
+
+**Pet Seekers:**
+* Can search adoptme's registered pet shelters for a pet based on type, shelter, and zipcode
+* Communicate with shelters directly
+
+# Getting Started
 
 ### Setting up a project
 
 * Move into your projects directory: `cd ~/YOUR_PROJECTS_DIRECTORY`
-* Clone this repository: `git clone https://github.com/Thinkful-Ed/full-stack-template YOUR_PROJECT_NAME`
+* Clone this repository: `https://github.com/pszujewski/pet-adoption-app YOUR_PROJECT_NAME`
 * Move into the project directory: `cd YOUR_PROJECT_NAME`
 * Install the dependencies: `npm install`
 * Create a new repo on GitHub: https://github.com/new
@@ -34,13 +47,30 @@ Client-side dependencies should be installed into the `client` directory:
 ```
 cd ~/YOUR_PROJECTS_DIRECTORY/YOUR_PROJECT_NAME/client
 npm install --save dependency-name
+
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-icons": "^2.2.3",
+    "react-redux": "^5.0.4",
+    "react-router-dom": "^4.1.1",
+    "redux": "^3.6.0",
+    "redux-thunk": "^2.2.0"
 ```
 
 Server-side dependencies should be installed into the `server` directory:
 
+
 ```
 cd ~/YOUR_PROJECTS_DIRECTORY/YOUR_PROJECT_NAME/server
 npm install --save dependency-name
+
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.17.1",
+    "express": "^4.14.1",
+    "mongoose": "^4.9.5",
+    "nodemon": "^1.11.0",
+    "passport": "^0.3.2",
+    "passport-http": "^0.3.0"
 ```
 
 ## Deployment
@@ -56,3 +86,14 @@ Requires the [Heroku CLI client](https://devcenter.heroku.com/articles/heroku-co
 
 * Push your code to Heroku: `git push heroku master`
 
+## Built With
+* React-Redux
+* Javascript
+* MongoDB
+
+## Authors
+
+* Peter Pszujewski
+* Ramon Reyes
+
+## Acknowledments
