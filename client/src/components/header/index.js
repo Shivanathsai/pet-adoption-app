@@ -9,7 +9,7 @@ import { logOut } from '../../actions';
 export function Header(props) {
   function renderSettingsIcon(){
     if(props.loggedInShelter){
-       return  <li><FaCog /></li>
+       return  <li><Link to='/shelters/dashboard/settings' ><FaCog /></Link></li>
     }
   }
   function renderLogOutIcon(){

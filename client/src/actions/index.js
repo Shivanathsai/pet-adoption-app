@@ -64,6 +64,11 @@ export const toggleAddPet = () => ({
   type: TOGGLE_ADD_PET
 });
 
+export const SAVE_SETTINGS = 'SAVE_SETTINGS';
+export const saveSettings = () => ({
+  type: SAVE_SETTINGS
+});
+
 export const fetchAddNewAnimal = (id, newAnimal) => dispatch => {
   fetch(`../../../api/login/update/${id}`, {
     headers: {

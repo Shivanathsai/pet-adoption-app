@@ -13,6 +13,7 @@ import ShelterDashboard from './components/dashboard';
 import PetProfileFull from './components/petProfileFull';
 import Footer from './components/footer';
 import Home from './components/home';
+import Settings from './components/settings';
 
 class App extends Component {
 
@@ -50,6 +51,7 @@ class App extends Component {
           <Route exact path="/shelters/dashboard" component={() => this.handleDashboard()} />
           <Route exact path="/shelters/login" component={() => this.handleLogIn(true)} />
           <Route exact path="/search/:id" component={PetProfileFull} />
+          <Route exact path="/shelters/dashboard/settings" component={Settings} />
           <Footer />
         </div>
       </Router>
