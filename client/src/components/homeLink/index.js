@@ -5,12 +5,12 @@ import './home-link.css';
 export default function HomeLink(props){
   return(
     <div className="home-link">
-      <h2>{props.title}</h2>
+      <h1>{props.title}</h1>
       <div className="blurb-conainer">
         <p>{props.blurb}</p>
       </div>
       <Link to={`${props.route}`}>
-        <button>Go</button>
+        <button>GO</button>
       </Link>
     </div>  
   )

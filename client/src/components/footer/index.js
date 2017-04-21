@@ -7,5 +7,5 @@ export default function Footer(props){
       <div>adoptme</div>
       <div>Contact</div>
     </div>
-  )
+  );
 }

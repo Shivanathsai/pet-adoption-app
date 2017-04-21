@@ -29,16 +29,25 @@ class App extends Component {
     }
   }
 
+  handleDashboard() {
+    if (this.props.logIn.loggedInShelter) {
+      return <ShelterDashboard />;
+    }
+    else {
+       return <Redirect to={'/'} />;
+    }
+  }
+
   render() {
     return (
       <Router>
-        <div>
+        <div className='flexbox'>
           <Header />
           <Route exact path="/" component={Home} />
           <Route exact path="/search" component={Search} />
           <Route exact path="/shelters" component={RegisterShelter} />
           <Route exact path="/shelters/signup" component={() => this.handleLogIn(false)} />
-          <Route exact path="/shelters/dashboard" component={ShelterDashboard} />
+          <Route exact path="/shelters/dashboard" component={() => this.handleDashboard()} />
           <Route exact path="/shelters/login" component={() => this.handleLogIn(true)} />
           <Route exact path="/search/:id" component={PetProfileFull} />
           <Footer />

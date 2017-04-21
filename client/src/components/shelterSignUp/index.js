@@ -1,7 +1,7 @@
 import React from 'react';
 import './shelterSignUp.css';
 import {connect} from 'react-redux';
-import {fetchLogInData} from '../../actions';
+import {logInSuccess} from '../../actions';
 
 export class ShelterSignUp extends React.Component {
 
@@ -36,7 +36,7 @@ export class ShelterSignUp extends React.Component {
     })
     .then(shelterDoc => {
       console.log(shelterDoc);
-      this.props.dispatch(fetchLogInData(shelterDoc.id));
+      this.props.dispatch(logInSuccess(shelterDoc));
     })
     .catch(err => console.error(err));
   }

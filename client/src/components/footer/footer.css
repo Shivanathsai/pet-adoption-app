@@ -1,12 +1,10 @@
 .footer-container {
   display: flex;
   justify-content: space-between;
-  width: 100%;
-  position: absolute;
-  bottom: 0;
   background-color: #f18f01;
-  padding: 20px 60px 23px 60px;
+  padding: 35px 40px;
 }
+
 .footer-container div{
-  color: white;
+  color: #fff;
 }

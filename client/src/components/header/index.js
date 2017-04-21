@@ -26,10 +26,10 @@ export function Header(props) {
     <header>
       <div className='navbar'>
         <ul>
-          <li><Link style={{ textDecoration: 'none' }}to='/'>adoptME</Link></li>
+          <li><Link to='/'>adoptme</Link></li>
           <li>About</li>
-          <li><Link style={{ textDecoration: 'none' }} to='/search'>Search</Link></li>
-          <li><Link style={{ textDecoration: 'none' }} to='/shelters'>Shelters</Link></li>
+          <li><Link to='/search'>Search</Link></li>
+          <li><Link to='/shelters'>Shelters</Link></li>
           {renderSettingsIcon()}
           {renderLogOutIcon()}
         </ul>

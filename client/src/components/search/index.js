@@ -65,24 +65,23 @@ export class Search extends React.Component {
   render() {
     return (
       <div>
+        <div className='form-container'>
+          <h2>Animal Search!</h2> 
+          <form>
 
-        <div className='search-container'>
-          <div className='form-container'>
-            <h2>Animal Search!</h2> 
-            <form>
+            <label htmlFor='type'>Seach by pet type</label><br />
+            <input placeholder='Type of pet' type='text' id='type' ref={input => this.inputType = input} /><br />
 
-              <label htmlFor='type'>Seach by pet type</label><br />
-              <input placeholder='Type of pet' type='text' id='type' ref={input => this.inputType = input} /><br />
+            <label htmlFor='zip'>Zip code</label><br />
+            <input placeholder='Zip code' type='text' id='zip' ref={input => this.inputZip = input} /><br />
 
-              <label htmlFor='zip'>Zip code</label><br />
-              <input placeholder='Zip code' type='text' id='zip' ref={input => this.inputZip = input} /><br />
+            <button onClick={(e) => this.handleSearch(e)}>Search</button>
 
-              <button onClick={(e) => this.handleSearch(e)}>Search</button>
-
-            </form>
-          </div>
+          </form>
         </div>
-        {this.getAnimals()}
+        <div className='animal-container'>
+          {this.getAnimals()}
+        </div>
       </div>
     );
   }
