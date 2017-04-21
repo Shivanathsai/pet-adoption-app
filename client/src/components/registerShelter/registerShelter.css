@@ -1,11 +1,26 @@
 .btn-container {
+  max-width: 960px;
+  margin: 0 auto;
   display: flex;
-  justify-content: space-between;
-  max-width: 500px;
-  margin-right: auto;
-  margin-left: auto;
+  justify-content: space-around;
 }
 
 .btn-container button {
   width: 100%;
+  margin-top: 10px;
+  border: 2px solid #006e90;
+  color: #006e90;
+  background-color: transparent; 
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-container button:hover {
+  background-color: #006e90;
+  color: #fff;
+}
+
+.btn-container h3 {
+  margin-top: 0;
+  margin-bottom: 40px;
 }
