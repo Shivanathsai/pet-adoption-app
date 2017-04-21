@@ -95,7 +95,7 @@ Requires the [Heroku CLI client](https://devcenter.heroku.com/articles/heroku-co
 
 ## Authors
 
-* Peter Pszujewski
+* Peter Szujewski
 * Ramon Reyes
 
 ## Acknowledments
