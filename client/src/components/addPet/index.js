@@ -46,8 +46,8 @@ export class AddPet extends React.Component {
             <label htmlFor="additionalInfo"></label><br />
             <input type="text" id="additionalInfo" placeholder="Additional Info" ref="additionalInfo" /><br />
 
-            <a className='add-pet-anchor-one'>Submit</a>
-            <a className='add-pet-anchor-two' onClick={(e)=> this.props.dispatch(toggleAddPet()) }>Cancel</a>
+            <button className='add-pet-btn-one'>Submit</button>
+            <button className='add-pet-btn-two' onClick={(e)=> this.props.dispatch(toggleAddPet()) }>Cancel</button>
 
           </form>
         </div>
