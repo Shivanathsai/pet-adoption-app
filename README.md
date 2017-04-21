@@ -1,4 +1,6 @@
 # AdoptMe: Help needy pets by adopting them.
+![alt text](./client/src/images/readme-homepage.jpg)
+[Deployed Site](https://lit-caverns-27597.herokuapp.com)
 
 AdoptMe was designed to address the dilema of shelters not being able to find home for pets. 
 
