@@ -33,16 +33,18 @@ export class ShelterDashboard extends React.Component{
  
   render(){
     return(
-      <div>
+      <div className='dashboard'>
         <div className="dash-container">
             <h1>Welcome to your Dashboard</h1>
             <h3>{this.props.shelter.name}</h3>
             <p>{this.props.shelter.location}</p>
             <p><b>Shelter type: {this.props.shelter.type}</b></p>
-            <h3>Featured Animals</h3>
+            <h3>Registered Animals</h3>
             {this.getAddPetForm()}
         </div>
-        {this.makePetProfiles()}
+        <div className='animal-container'>
+           {this.makePetProfiles()}
+        </div>
       </div>
     )
   }

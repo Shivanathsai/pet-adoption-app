@@ -64,7 +64,7 @@ export class Search extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className='search'>
         <div className='form-container'>
           <h2>Animal Search!</h2> 
           <form>

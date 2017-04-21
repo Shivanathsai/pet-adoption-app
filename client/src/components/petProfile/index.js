@@ -9,7 +9,7 @@ export function PetProfile(props) {
 
   function getBtn() {
     if (props.dashboardView) {
-      return <button onClick={(e) => removeAnimal(e)}>Remove</button>;
+      return <a className='remove' onClick={(e) => removeAnimal(e)}>Remove</a>;
     }
   }
 
@@ -37,16 +37,15 @@ export function PetProfile(props) {
     <div className='pet-profile'>
       <img className="dummy-image" alt="Pet"/>
         <div className="info">
-          {getAnimalName()}
+          <div className="editing">
+            {getAnimalName()}
+            {getBtn()}
+          </div> 
           <p>Type: {props.type}</p>
           {getShelterInfo()}
-          <p>This animal needs a home</p> 
-        </div>
-        <div className="editing">
-          {getBtn()}
-        </div>       
+          <p>Let's find this animal a home!</p> 
+        </div>    
     </div>
-
   );
 }
 

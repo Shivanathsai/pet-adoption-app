@@ -27,7 +27,7 @@ export function PetProfileFull(props) {
           <p>Location: {shelterObj.address} {shelterObj.state}, {shelterObj.zipcode} </p>
           <p>Status: {animalObj.status}</p>
           <p>Additional Info: {animalObj.additionalInfo}</p>
-          <p className="blurb">This is a sweet and caring pet that needs a home!</p>
+          <p className="blurb">Let's find this animal a home!</p>
         </div>
       </div>
       <div className="history">

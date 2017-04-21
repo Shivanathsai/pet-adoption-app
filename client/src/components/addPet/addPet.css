@@ -1,0 +1,30 @@
+/*.add-pet-btn {
+  margin-top: 10px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  border: 2px solid #006e90;
+  color: #006e90;
+  background-color: transparent; 
+  border-radius: 5px;
+  cursor: pointer;
+}*/
+
+#additionalInfo {
+  margin-bottom: 15px;
+}
+
+.add-pet-container a:hover {
+  color: #006e90;
+}
+
+.add-pet-anchor-one {
+  padding-left: 5px;
+  padding-right: 10px;
+  border-right: 1px solid lightgray;
+}
+
+.add-pet-anchor-two {
+  padding-left: 10px;
+  padding-right: 5px;
+  border-left: 1px solid lightgray;
+}

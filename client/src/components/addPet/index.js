@@ -2,6 +2,7 @@ import React from 'react'
 import {connect} from 'react-redux';
 import {fetchAddNewAnimal} from '../../actions';
 import {toggleAddPet} from '../../actions';
+import './addPet.css';
 
 export class AddPet extends React.Component {
 
@@ -45,8 +46,8 @@ export class AddPet extends React.Component {
             <label htmlFor="additionalInfo"></label><br />
             <input type="text" id="additionalInfo" placeholder="Additional Info" ref="additionalInfo" /><br />
 
-            <button>Submit</button>
-            <button onClick={(e)=> this.props.dispatch(toggleAddPet()) }>Cancel</button>
+            <a className='add-pet-anchor-one'>Submit</a>
+            <a className='add-pet-anchor-two' onClick={(e)=> this.props.dispatch(toggleAddPet()) }>Cancel</a>
 
           </form>
         </div>

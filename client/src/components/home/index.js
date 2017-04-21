@@ -21,7 +21,7 @@ export default function Home(props){
     <div className='home'>
       <div className="hero-image">
         <div className='faded'>
-          <h1 className="tagline">Help a pet in need</h1>
+          <h1 className="tagline">Find a new friend</h1>
         </div>
       </div>
       <div className="home-link-container">

@@ -51,30 +51,16 @@ export class ShelterSignUp extends React.Component {
       <div>
         <div className="register-container">
           <h2>Shelter Sign Up</h2>
+          <h4>Complete the fields below to sign up!</h4>
           <form onSubmit={(e)=> this.handleRegister(e)}>
-            <label htmlFor="name"></label><br />
             <input id="name" placeholder="Name" ref='name' /><br />
-
-            <label htmlFor="type"></label><br />
-            <input id="type" placeholder="Type" ref='type' /><br />
-
-            <label htmlFor="email"></label><br />
+            <input id="type" placeholder="Type of shelter" ref='type' /><br />
             <input id="email" placeholder="Email" ref='email' /><br />
-
-            <label htmlFor="password"></label><br />
             <input id="password" placeholder="Password" ref='password' /><br />
-
-            <label htmlFor="address"></label><br />
             <input id="address" placeholder="Address" ref='address' /><br />
-
-            <label htmlFor="zipcode"></label><br />
             <input id="zipcode" placeholder="Zipcode" ref='zipcode' /><br />
-
-            <label htmlFor="State"></label><br />
             <input id="state" placeholder="State" ref='state' /><br />
-
             <button>Submit</button>
-            
           </form>
         </div>
       </div>
