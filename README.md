@@ -1,5 +1,5 @@
 # AdoptMe: Adopt a new animal
-![alt text](./client/src/images/readme-homepage.jpg)
+![Homepage image](/client/src/images/readme-homepage.jpg)
 [Deployed Site](https://lit-caverns-27597.herokuapp.com)
 
 ## Description
