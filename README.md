@@ -1,11 +1,12 @@
 # AdoptMe: Adopt a new animal
 ![Homepage image](https://github.com/pszujewski/pet-adoption-app/blob/feature-image/client/src/images/readme_homepage.jpg)
-[Deployed Site](https://lit-caverns-27597.herokuapp.com)
 
 ## Description
 
 AdoptMe was designed to facilitate the adoption of animals from over-crowded animal shelters.  
 AdoptMe is a hub for both animal shelters and people searching for pets. 
+
+* [View the Deployed Site](https://lit-caverns-27597.herokuapp.com)
 
 **Animal Shelters:** 
 * Can create an account for their shelter
