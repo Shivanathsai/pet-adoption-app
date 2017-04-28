@@ -71,8 +71,8 @@ app.post('/api', jsonParser, (req, res) => {
             password: hash,
             address: req.body.address,
             zipcode: req.body.zipcode,
+            city: req.body.city,
             state: req.body.state,
-            type: req.body.type,
             animals: []
          });
      })
@@ -173,12 +173,6 @@ function closeServer() {
 if (require.main === module) {
     runServer();
 }
-
-
-// exports.DATABASE_URL = process.env.DATABASE_URL ||
-//                        global.DATABASE_URL ||
-//                       'mongodb://localhost/pet-adoption-app';
-// exports.PORT = process.env.PORT || 3001;
 
 module.exports = {
     app, runServer, closeServer

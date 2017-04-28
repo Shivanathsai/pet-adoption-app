@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { hashHistory } from 'react-router';
+//import { hashHistory } from 'react-router';
 import { saveSettings } from '../../actions';
 import './settings.css';
 
@@ -29,7 +29,9 @@ export class Settings extends React.Component{
             <option value="remove">Remove Shelter</option>
             <option value="update">Update Shelter</option>
           </select><br/>
-          <button onClick={(e)=> this.handleSave(e)}className="save-btn">Save</button>
+          <div className='save'>
+            <button onClick={(e)=> this.handleSave(e)}className="save-btn">Save</button>
+          </div>
         </form>
       </div>
     )

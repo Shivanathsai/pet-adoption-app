@@ -6,15 +6,15 @@ const shelterSchema = mongoose.Schema({
     email: {type: String, required: true},
     password: {type: String, required: true},
     address: {type: String, required: true},
+    city: {type: String, required: true},
     zipcode: {type: String, required: true},
     state: {type: String, required: true},
-    type: {type:String },
     animals: [{
         type: {type: String},
         name: {type: String},
         age: {type: String},
         status: {type: String},
-        additionalInfo: {type: String}
+        image: {type:String }
     }]
 })
 
@@ -25,7 +25,7 @@ shelterSchema.statics.hashPassword = function(password) {
 }
 
 shelterSchema.virtual('locationString').get(function() {
-    return `${this.address} ${this.state}, ${this.zipcode}`.trim()
+    return `${this.address} ${this.city}, ${this.state}, ${this.zipcode}`.trim()
 });
 
 shelterSchema.methods.apiRepr = function() {
@@ -33,7 +33,6 @@ shelterSchema.methods.apiRepr = function() {
         id: this._id,
         name: this.name,
         location: this.locationString,
-        type: this.type,
         email: this.email,
         animals: this.animals   
     }

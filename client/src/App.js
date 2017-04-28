@@ -39,6 +39,15 @@ class App extends Component {
     }
   }
 
+  handleFullProfile(context) {
+    if (this.props.shelters.length > 0) {
+      return <PetProfileFull id={context.match.params.id}/>;
+    }
+    else {
+      return <Redirect to={'/'} />;
+    }
+  }
+
   render() {
     return (
       <Router>
@@ -50,7 +59,7 @@ class App extends Component {
           <Route exact path="/shelters/signup" component={() => this.handleLogIn(false)} />
           <Route exact path="/shelters/dashboard" component={() => this.handleDashboard()} />
           <Route exact path="/shelters/login" component={() => this.handleLogIn(true)} />
-          <Route exact path="/search/:id" component={PetProfileFull} />
+          <Route exact path="/search/:id" component={(x) => this.handleFullProfile(x)} />
           <Route exact path="/shelters/dashboard/settings" component={Settings} />
           <Footer />
         </div>
@@ -60,6 +69,7 @@ class App extends Component {
 }
 
 const mapStateToProps = (state) => ({
+  shelters: state.shelters.data,
   logIn: state.logIn
 });
 

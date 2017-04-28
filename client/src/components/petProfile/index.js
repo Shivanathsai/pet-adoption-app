@@ -1,6 +1,5 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import {PetProfileFull} from '../petProfileFull';
 import './petProfile.css';
 import {connect} from 'react-redux';
 import {deleteAnimal} from '../../actions';
@@ -21,10 +20,10 @@ export function PetProfile(props) {
 
   function getAnimalName() {
      if (props.dashboardView) {
-      return <h3>Name: {props.name}</h3>;
+      return <h3>Name: {props.animal.name}</h3>;
      } 
      else {
-      return <h3><Link to={`/search/${props.petId}`}>Name: {props.name}</Link></h3>;
+      return <h3><Link to={`/search/${props.petId}`}>Name: {props.animal.name}</Link></h3>;
      }
   }
 
@@ -35,13 +34,13 @@ export function PetProfile(props) {
 
   return (
     <div className='pet-profile'>
-      <img className="dummy-image" alt="Pet"/>
+      <img className="dummy-image" alt="Pet" src={props.animal.image} />
         <div className="info">
           <div className="editing">
             {getAnimalName()}
             {getBtn()}
           </div> 
-          <p>Type: {props.type}</p>
+          <p>Type: {props.animal.type}</p>
           {getShelterInfo()}
           <p>Let's find this animal a home!</p> 
         </div>    

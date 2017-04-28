@@ -1,4 +1,4 @@
-.home-link{
+.home-link {
   width: 28%;
   padding-top: 25px;
   padding-bottom: 25px;
@@ -26,4 +26,10 @@
   background-color: #006e90;
   color: #fff;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 700px) {
+    .home-link {
+      width: 100%;
+    }
 }

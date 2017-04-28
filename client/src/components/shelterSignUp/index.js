@@ -12,8 +12,8 @@ export class ShelterSignUp extends React.Component {
       password: this.refs.password.value,
       address: this.refs.address.value,
       zipcode: this.refs.zipcode.value,
+      city: this.refs.city.value,
       state: this.refs.state.value,
-      type: this.refs.type.value,
     };
     return fetch('../../../api', {
       headers: {
@@ -29,8 +29,8 @@ export class ShelterSignUp extends React.Component {
       this.refs.password.value = '';
       this.refs.address.value = '';
       this.refs.zipcode.value = '';
+      this.refs.city.value = '';
       this.refs.state.value = '';
-      this.refs.type.value = '';
       console.log('POST Success');
       return res.json(); 
     })
@@ -46,7 +46,7 @@ export class ShelterSignUp extends React.Component {
     this.postShelter();
   }
 
-  render(){
+  render() {
     return(
       <div>
         <div className="register-container">
@@ -54,11 +54,11 @@ export class ShelterSignUp extends React.Component {
           <h4>Complete the fields below to sign up!</h4>
           <form onSubmit={(e)=> this.handleRegister(e)}>
             <input id="name" placeholder="Name" ref='name' /><br />
-            <input id="type" placeholder="Type of shelter" ref='type' /><br />
             <input id="email" placeholder="Email" ref='email' /><br />
             <input id="password" placeholder="Password" ref='password' /><br />
             <input id="address" placeholder="Address" ref='address' /><br />
             <input id="zipcode" placeholder="Zipcode" ref='zipcode' /><br />
+            <input id="city" placeholder="City" ref='city' /><br />
             <input id="state" placeholder="State" ref='state' /><br />
             <button>Submit</button>
           </form>

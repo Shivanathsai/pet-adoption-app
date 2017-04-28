@@ -8,11 +8,15 @@ export default function RegisterShelter(props) {
       <div className="btn-container">
         <div className='log-in'>
           <h3>Do you already have an account?</h3>
-          <Link to='/shelters/login'><button>Log In</button></Link>
+          <div className='btm-btn-wrapper'>
+            <Link to='/shelters/login'><button>Log In</button></Link>
+          </div>
         </div>
         <div className='sign-up'>
           <h3>Ready to register your shelter?</h3>
-          <Link to='/shelters/signup'><button>Sign Up</button></Link>
+          <div className='btm-btn-wrapper'>
+            <Link to='/shelters/signup'><button>Sign Up</button></Link>
+          </div>
         </div>
       </div>
     </div>

@@ -12,7 +12,7 @@ export class AddPet extends React.Component {
       name: this.refs.name.value,
       age: this.refs.age.value,
       status: this.refs.status.value,
-      additionalInfo: this.refs.additionalInfo.value
+      image: this.refs.imageUrl.value
     };
     console.log(newAnimal);
     event.preventDefault();
@@ -22,7 +22,7 @@ export class AddPet extends React.Component {
     this.refs.name.value = '';
     this.refs.age.value = '';
     this.refs.status.value = '';
-    this.refs.additionalInfo.value = '';
+    this.refs.imageUrl.value = '';
   }
 
   render(){
@@ -43,8 +43,8 @@ export class AddPet extends React.Component {
             <label htmlFor="status"></label><br />
             <input type="text" id="status" placeholder="Status" ref="status"/><br />
 
-            <label htmlFor="additionalInfo"></label><br />
-            <input type="text" id="additionalInfo" placeholder="Additional Info" ref="additionalInfo" /><br />
+            <label htmlFor="image"></label><br />
+            <input type="text" id="image" placeholder="Image Url" ref="imageUrl" /><br />
 
             <button className='add-pet-btn-one'>Submit</button>
             <button className='add-pet-btn-two' onClick={(e)=> this.props.dispatch(toggleAddPet()) }>Cancel</button>
