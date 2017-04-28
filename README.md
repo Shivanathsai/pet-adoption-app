@@ -1,5 +1,5 @@
 # AdoptMe: Adopt a new animal
-![Homepage image](https://github.com/pszujewski/pet-adoption-app/blob/feature-image/client/src/images/readme_homepage.jpg)
+![Homepage image](https://github.com/pszujewski/pet-adoption-app/blob/master/client/src/images/readme_homepage.jpg)
 
 ## Description
 
