@@ -1,7 +1,7 @@
 {
-  "name": "thinkful-full-stack-template-v2",
+  "name": "adoptme",
   "version": "0.1.0",
-  "description": "A full-stack starter template",
+  "description": "pet adoption app",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
@@ -18,7 +18,7 @@
     "server/node_modules",
     "client/node_modules"
   ],
-  "author": "Joe Turner <jturner@thinkful.com>",
+  "author": "Peter Szujewski and Ramon Reyes",
   "license": "MIT",
   "dependencies": {
     "cross-env": "^3.1.4",
