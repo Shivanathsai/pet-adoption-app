@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { hashHistory } from 'react-router';
+//import { hashHistory } from 'react-router';
 import { saveSettings } from '../../actions';
 import './settings.css';
 

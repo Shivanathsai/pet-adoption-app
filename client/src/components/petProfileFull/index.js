@@ -8,7 +8,7 @@ export function PetProfileFull(props) {
   let shelterObj;
   props.shelters.forEach(shelter => {
     shelter.animals.forEach(animal => {
-      if (props.match.params.id === animal._id) {
+      if (props.id === animal._id) {
         animalObj = animal;
         shelterObj = shelter;
       }
@@ -18,30 +18,19 @@ export function PetProfileFull(props) {
     <div className="pet-profile-container">
       <div className="general-info">
         <div className="dummy-container">
-          <img className="dummy-image-full"/>
+          <img className="dummy-image-full" src={animalObj.image} alt='Animal'/>
         </div>
         <div className="stats">
           <h1>Name: {animalObj.name}</h1>
           <p>Age: {animalObj.age}</p>
           <p>Shelter: {shelterObj.name || shelterObj.shelter }</p>
-          <p>Location: {shelterObj.address} {shelterObj.state}, {shelterObj.zipcode} </p>
+          <p>Location: {shelterObj.address} {shelterObj.city} {shelterObj.state}, {shelterObj.zipcode} </p>
           <p>Status: {animalObj.status}</p>
-          <p>Additional Info: {animalObj.additionalInfo}</p>
           <p className="blurb">Let's find this animal a home!</p>
         </div>
       </div>
-      <div className="history">
-        <h3>History</h3>
-          <p>
-            Ne quaeque fabulas incorrupte sea, quo ne falli latine. Eam autem graeco tritani ei. Sea neglegentur definitionem ad, id vim aeque laboramus pertinacia. Graeco iisque eu eos, vis cibo prima principes ut
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet, his quando voluptatum liberavisse ex, epicuri constituto signiferumque ad sit. Ne quaeque fabulas incorrupte sea, quo ne falli latine. Eam autem graeco tritani ei. Sea neglegentur definitionem ad, id vim aeque laboramus pertinacia. Graeco iisque eu eos, vis cibo prima principes ut
-          </p>
-        </div>
     </div>
-
-  )
+  );
 }
 const mapPropsToState = state => ({
   shelters: state.shelters.data

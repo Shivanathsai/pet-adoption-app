@@ -5,10 +5,15 @@
   height: 300px;
   width: 300px;
 }
+
+.pet-profile-container h1 {
+  margin-top: 10px;
+}
+
 .pet-profile-container {
   padding-top: 30px;
   width: 700px;
-  margin: 0 auto;
+  margin: 10px auto 40px;
 }
 .general-info{
   display: flex;
