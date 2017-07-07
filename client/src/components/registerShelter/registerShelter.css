@@ -30,6 +30,12 @@
   margin-bottom: 40px;
 }
 
+ .btn-container .log-in, .btn-container .sign-up {
+
+    margin: 100px auto;
+  }
+
+
 @media only screen and (max-width: 500px) {
   .btn-container {
     display: block;

@@ -21,7 +21,7 @@ export function PetProfileFull(props) {
           <img className="dummy-image-full" src={animalObj.image} alt='Animal'/>
         </div>
         <div className="stats">
-          <h1>Name: {animalObj.name}</h1>
+          <h1>{animalObj.name}</h1>
           <p>Age: {animalObj.age}</p>
           <p>Shelter: {shelterObj.name || shelterObj.shelter }</p>
           <p>Location: {shelterObj.address} {shelterObj.city} {shelterObj.state}, {shelterObj.zipcode} </p>

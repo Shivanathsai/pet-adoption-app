@@ -3,10 +3,13 @@
   flex-direction: column;
   justify-content: flex-start;
   padding-top: 30px;
+  align-items: middle;
 }
 
+.animal-container h3{
+  font-family: 'Sansita One', sans-serif;
+}
 .form-container {
-  width: 30%;
   padding-bottom: 20px;
   margin-right: auto;
   margin-left: auto;
@@ -28,7 +31,8 @@
 
 .form-container button {
   width: 100%;
-  margin-top: 10px;
+  height: 38px;
+  margin-top: 3px;
   padding-top: 7px;
   padding-bottom: 7px;
   border: 2px solid #006e90;
@@ -36,6 +40,7 @@
   background-color: transparent; 
   border-radius: 5px;
   cursor: pointer;
+  vertical-align: middle;
 }
 
 .form-container button:hover {
@@ -51,6 +56,14 @@
   max-width: 960px;
   margin: 0 auto;
   padding: 20px 20px 40px;
+}
+.animal-container a{
+  text-decoration: none;
+}
+.pet-search-field{
+  display: inline-block;
+  width: 33.33%;
+  vertical-align: middle;
 }
 
 @media only screen and (max-width: 500px) {

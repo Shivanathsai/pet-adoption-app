@@ -14,16 +14,16 @@ export function PetProfile(props) {
 
   function getShelterInfo() {
     if (!props.dashboardView) {
-      return <p>Shelter: {props.shelter}</p>;
+      return <p><b>Shelter: </b>{props.shelter}</p>;
     }
   }
 
   function getAnimalName() {
      if (props.dashboardView) {
-      return <h3>Name: {props.animal.name}</h3>;
+      return <h3>{props.animal.name}</h3>;
      } 
      else {
-      return <h3><Link to={`/search/${props.petId}`}>Name: {props.animal.name}</Link></h3>;
+      return <h3><Link to={`/search/${props.petId}`}>{props.animal.name}</Link></h3>;
      }
   }
 
@@ -40,7 +40,7 @@ export function PetProfile(props) {
             {getAnimalName()}
             {getBtn()}
           </div> 
-          <p>Type: {props.animal.type}</p>
+          <p><b>Type:</b> {props.animal.type}</p>
           {getShelterInfo()}
           <p>Let's find this animal a home!</p> 
         </div>    

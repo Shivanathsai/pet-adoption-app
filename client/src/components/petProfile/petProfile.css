@@ -39,7 +39,13 @@
   right: 0;
   width: 100px;
 }*/
-
+.pet-profile a:link, .pet-profile a:visited {
+  color: #FCBA04;
+}
+.pet-profie p {
+  font-family: 'Kameron', 'sans-serif';
+  font-size: 12px;
+}
 .editing {
   display: flex;
   justify-content: space-between;
