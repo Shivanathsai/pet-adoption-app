@@ -1,7 +1,7 @@
 import React from 'react';
 import './home.css';
 import HomeLink from '../homeLink';
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 export default function Home(props){
   
@@ -16,6 +16,7 @@ export default function Home(props){
         <h3>Featured Pets</h3>
       </div>
       <div className="home-link-container">
+        <Link to={'/search'}>
         <div className="pet-container">
           <h4>Billy <span className="info-highlight">Age: 1</span></h4>
           <div className="image-container">
@@ -23,6 +24,7 @@ export default function Home(props){
             <img alt= "Billy the dog" src="http://scienceblogs.com/insolence/files/2017/04/Dogrunning.jpg" className="featured-pet"/>
           </div>
         </div>
+        </Link>
         <div className="pet-container">
           <h4>Ronald <span className="info-highlight">Age: 4</span></h4>
           <div className="image-container">

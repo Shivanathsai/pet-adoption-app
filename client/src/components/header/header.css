@@ -58,7 +58,7 @@ header {
 }
 
 .navbar ul li:first-child {
-  background-color: #FCBA04;
+  /* background-color: #FCBA04; */
   font-size: 40px;
 }
 .navbar ul li{
